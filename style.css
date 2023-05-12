@@ -1,0 +1,56 @@
+#back_input {
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 2fr;   
+    margin: 1rem;
+}
+#grid{
+    display: grid;
+    grid-template-columns: 1fr 3rem 5rem;
+    grid-template-rows: 3rem;
+    text-align: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+#add{
+    font-size: 40px;
+    color: white;
+    background-color: #05df05;
+    border: none;
+    border-radius: 5px;
+}
+#text{
+    border-radius: 15px;
+    border-color: #a7aedf69;
+    font-size: 24px;
+    text-indent: 10px;
+}
+#name__list{
+    margin-bottom: 1rem;
+    font-size: 22px;
+    margin-left: 1rem;
+}
+#del{
+    background-color: #ff0000bf;
+    border: none;
+    border-radius: 5px;
+    opacity: 0.3;
+    font-size: 18px;
+}
+#error{
+    color: red;
+    background-color: rgb(127, 194, 252);
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem;
+    font-weight: 600;
+    display: none;
+}
+.activeBtn{
+    opacity: 1;
+}
+.none__activeBtn{
+    opacity: 0.3;
+}

@@ -5,6 +5,7 @@ const item = []
 const myItem = document.querySelector('.item')
 const error = document.getElementById('error')
 
+// visible add button
 function activeBtn(){
     if(input.value){
         add.classList.add('active')
@@ -20,8 +21,7 @@ function activeBtn(){
     }
 }
 
-
-
+//create item
 function createItemList () {
     if(!input.value){
     return
@@ -40,7 +40,7 @@ else{
  });
 
 }
-
+//add item
 function addItem (){
     const list = {
     item: input.value,
@@ -52,7 +52,7 @@ function addItem (){
   input.value = ''
   activeBtn()
 }
-console.log(error)
+//check on dublicates list
 function removeDuplicates (){
     const dupliicate = item.filter((el, index) => {
         return index === item.findIndex((obj) => {
@@ -67,7 +67,7 @@ function removeDuplicates (){
     }
     else error.style.display = 'none'
 }
-
+//delete button
 listInput.addEventListener('click',(e) =>{
    if(e.target.id === 'del'){
      const perent = e.target.closest('ul')

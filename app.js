@@ -121,6 +121,9 @@ if(e.target.id === 'icon-done'){
     const perent = e.target.closest('ul')
     let searchName = perent.firstElementChild.textContent
     let index = item.map(e => e.item).indexOf(searchName);
+    const done_list = {
+        item_done: searchName
+    }
     item.splice(index, 1)
     perent.remove()
     index_complite = index
@@ -129,10 +132,14 @@ if(e.target.id === 'icon-done'){
     let itemEl = ''
     complite_list.forEach(element => {
     itemEl += `<ul class="items">
-    <li class="item-list">${complite_list[index_complite]}</li>
+    <li class="item-list">${element}</li>
     <button id="del">X</button>
     </ul>` 
     item_complite.innerHTML = itemEl
+    if(item.length === 0){
+        myItem.style.visibility = 'hidden'
+        return
+     }
  });
 }
 })
@@ -166,6 +173,7 @@ add_edit.addEventListener('click', ()=>{
 
 //item_complite_list del button
 item_complite.addEventListener('click',(e) =>{
+   
     if(e.target.id === 'del'){
       const perent = e.target.closest('ul')
       let searchName = perent.firstElementChild.textContent
